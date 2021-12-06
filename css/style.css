@@ -1,0 +1,234 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Fanwood Text', serif;
+  background-color: #BFBFBD;
+  
+}
+
+/* GRID MOBILE 1FRST*/
+.grid-container{
+  width: 90%;
+  margin: 20px auto;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(1 1fr);
+  grid-template-rows: repeat(auto 1fr);
+  grid-template-areas:  
+  "h1"
+  "header"
+  "txt__index"
+  "nosotros-img1"
+  "nosotros-txt1"
+  "nosotros-img2"
+  "nosotros-txt2"
+  "form"
+  "img__1"
+  "txt__1"
+  "img__2"
+  "txt__2"
+  "img__3"
+  "txt__3"
+  "img__4"
+  "txt__4"
+  "footer";
+  
+}
+
+.grid-container .h1,
+.grid-container .header,
+.grid-container .img,
+.grid-container .txt,
+.grid-container .nosotros__img,
+.grid-container .footer{
+  background: #D9D9D9;
+  border-radius: 4px;
+  padding: 20px;
+}
+
+.h1 {
+  grid-area: h1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  color: #A69989;
+}
+.header {
+  grid-area: header;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.nav{
+  width: 100%;
+}
+.nav >ul {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  list-style-type: none;
+}
+a{
+  text-decoration: none;
+  color: #A69989;
+  font-size: 32px;
+}
+
+/* NOMBRE AREAS GRID */
+
+#img__1{
+  grid-area: img__1;
+}
+#txt__1{
+  grid-area: txt__1;
+}
+#img__2{
+  grid-area: img__2;
+}
+#txt__2{
+  grid-area: txt__2;
+}
+#img__3{
+  grid-area: img__3;
+}
+#txt__3{
+  grid-area: txt__3;
+}
+#img__4{
+  grid-area: img__4;
+}
+#txt__4{
+  grid-area: txt__4;
+}
+#txt__index{
+  grid-area: txt__index;
+}
+#nosotros-img1{
+  grid-area: nosotros-img1;
+}
+#nosotros-img2{
+  grid-area: nosotros-img2;
+}
+#nosotros-txt1{
+  grid-area: nosotros-txt1;
+
+}
+#nosotros-txt2{
+  grid-area: nosotros-txt2;
+}
+.img,
+.nosotros__img{
+  display: flex;
+  justify-content: center;
+}
+.txt{
+  display: flex;
+  justify-content: center;
+  color: #8f8272;
+}
+
+.footer{
+  grid-area: footer;
+  display: flex;
+  align-content: center;
+  justify-content: right;
+}
+
+
+/* MEDIAS */
+
+
+
+@media screen and (min-width: 768px) {
+  .grid-container{
+    grid-template-areas: 
+  "h1        h1"
+  "header    header"
+  "txt__index txt__index"
+  "nosotros-txt1  nosotros-img1"
+  "nosotros-img2  nosotros-txt2"
+  "form             form"
+  "img__1    txt__1"
+  "img__2    txt__2"
+  "img__3    txt__3"
+  "img__4    txt__4"
+  "footer    footer";
+  }
+  .txt{
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .grid-container{
+    grid-template-areas: 
+    "h1         h1"
+    "header     header"
+    "txt__index txt__index"
+    "nosotros-txt1  nosotros-img1"
+    "nosotros-img2  nosotros-txt2"
+    "form         form"
+    "img__1     img__2"
+    "txt__1     txt__2"
+    "img__3     img__4"
+    "txt__3     txt__4"
+    "footer     footer"
+    ;
+}
+}
+
+
+
+/* CONTACTO */
+
+.form {
+  grid-area: form;
+background: transparent;
+color: #b3aca7;
+}
+
+#form {
+position: relative;
+width: 500px;
+
+}
+
+input {
+font-size: 14px;
+width: 470px;
+height: 50px;
+padding: 0px 15px 0px 15px;
+background: transparent;
+outline: none;
+color: #726659;
+border: solid 1px #b3aca7;
+}
+
+input:hover {
+  background: #b3aca7;
+  color: #e2dedb;
+}
+
+textarea {
+width: 470px;
+max-width: 470px;
+height: 110px;
+max-height: 110px;
+padding: 15px;
+background: transparent;
+outline: none;
+color: #726659;
+font-size: 14px;
+border: solid 1px #b3aca7;
+}
+
+textarea:hover {
+background: #b3aca7;
+color: #e2dedb;
+}
